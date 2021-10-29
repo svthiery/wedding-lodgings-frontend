@@ -21,7 +21,7 @@ function Buildings({ buildings }) {
 
   return (
     <div className="buildings main-homepage-section col-12">
-      {buildingsList}
+      <div className="buildings-container">{buildingsList}</div>
     </div>
   );
 }

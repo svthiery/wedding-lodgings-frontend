@@ -66,11 +66,11 @@ code {
   }
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1000px) {
   /* For tablets: */
 
-  .col-8 {
-    width: 91.66%;
+  [class*="col-"] {
+    width: 100%;
   }
 }
 
@@ -80,6 +80,21 @@ code {
   display: table;
 }
 
-.main-homepage-section {
+/* .main-homepage-section {
   margin: auto;
+} */
+
+.main-video {
+  padding: 0px;
+}
+
+#buildings-container {
+  margin: auto;
+}
+
+.building-tile {
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  height: 325px;
 }

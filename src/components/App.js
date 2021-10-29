@@ -4,7 +4,7 @@ import ReactLoading from "react-loading";
 import "../App.css";
 
 import Header from "./Header";
-import MainVideo from "./MainVideo";
+import MainPhoto from "./MainPhoto";
 import About from "./About";
 import Map from "./Map";
 import Pricing from "./Pricing";
@@ -33,7 +33,7 @@ function App() {
         <Header></Header>
         <Switch>
           <Route path="/">
-            <MainVideo></MainVideo>
+            <MainPhoto></MainPhoto>
             <About></About>
             <Map></Map>
             <Pricing></Pricing>

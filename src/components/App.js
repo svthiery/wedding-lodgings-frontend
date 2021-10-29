@@ -13,6 +13,20 @@ import BuildingPage from "./BuildingPage";
 import RoomPage from "./RoomPage";
 
 function App() {
+  const [buildings, setBuildings] = useState([]);
+  console.log(buildings);
+
+  const [isBuildingsLoading, setIsBuildingsLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/buildings")
+      .then((response) => response.json())
+      .then((buildingsArr) => {
+        setBuildings(buildingsArr);
+        setIsBuildingsLoading(false);
+      });
+  }, []);
+
   return (
     <div className="app">
       <Router>
@@ -23,7 +37,7 @@ function App() {
             <About></About>
             <Map></Map>
             <Pricing></Pricing>
-            <Buildings></Buildings>
+            <Buildings buildings={buildings}></Buildings>
           </Route>
           {/* Come back and create shortened names of buildings to use for resources here */}
           <Route path="/:buildingId">

@@ -14,6 +14,9 @@ code {
 
 .app {
   box-sizing: border-box;
+  background-color: #faf6e9;
+  color: #494949;
+  font-family: "Gotham";
 }
 
 .col-1 {
@@ -84,7 +87,11 @@ code {
   margin: auto;
 } */
 
-.main-video {
+h1 {
+  font-family: "Zen Antique", serif;
+}
+
+.main-photo {
   padding: 0px;
 }
 

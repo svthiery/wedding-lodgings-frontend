@@ -1,7 +1,10 @@
 import BuildingTile from "./BuildingTile";
 
 function Buildings({ buildings }) {
-  const buildingsList = buildings.map((building) => {
+  const availableBuildings = buildings.filter(
+    (building) => building.is_available === true
+  );
+  const buildingsList = availableBuildings.map((building) => {
     return (
       <BuildingTile
         key={building.id}
@@ -20,8 +23,10 @@ function Buildings({ buildings }) {
   console.log(buildings);
 
   return (
-    <div className="buildings main-homepage-section col-12">
-      <div className="buildings-container">{buildingsList}</div>
+    <div className="row">
+      <div className="buildings main-homepage-section col-12">
+        <div className="buildings-container">{buildingsList}</div>
+      </div>
     </div>
   );
 }

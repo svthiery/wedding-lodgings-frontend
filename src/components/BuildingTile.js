@@ -14,8 +14,8 @@ function BuildingTile({
       <div building-thumbnail col-12>
         <h1>{name}</h1>
         <h2>{location}</h2>
-        <h2>{price}€</h2>
-        <h3>{capacity}</h3>
+        <h2>{price} €</h2>
+        <h3>Sleeps {capacity}</h3>
         <h4>{format}</h4>
       </div>
     </div>
